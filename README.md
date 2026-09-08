@@ -73,3 +73,22 @@ e0 --r1--> e1 --r2--> ... --rn--> answer
           |
           v
 Answer correctness + Path traceability
+```
+
+THESEUS evaluates both:
+
+- **Answer ranking:** Hits@K and MRR
+- **Path traceability:** RED, PED, F1_Rel, and F1_SG
+
+The adapted models replace their original symbolic query interfaces with
+natural-language question conditioning while preserving their underlying
+navigation architectures.
+
+---
+
+## Citation
+
+Citation information will be added with the public preprint.
+
+If you use one of the adapted implementations, please also cite the
+corresponding original **MINERVA**, **MultiHopKG**, or **SQUIRE** paper.
