@@ -12,9 +12,9 @@ explicit sequence of relations and entities used to get there.
 The goal is to evaluate not only **whether a model reaches the correct answer**,
 but also **whether its trajectory follows the intended reasoning structure**.
 
-> **Paper:** *Theseus in the Graph: Towards Traceable Multi-Hop Graph Navigation*  
+> **Paper:** [*Theseus in the Graph: Towards Traceable Multi-Hop Graph Navigation*](https://arxiv.org/abs/2609.14528)  
 > Eduin E. Hernandez, Luis F. Garcia, Nurassyl Askar, Sergio A. Diaz, Stefano Rini  
-> **Preprint:** link coming soon
+> **arXiv:** [2609.14528](https://arxiv.org/abs/2609.14528)
 
 ---
 
@@ -27,8 +27,12 @@ checkpoints, and evaluation resources used in THESEUS.
 
 | Dataset | Description | Resource |
 | --- | --- | --- |
-| **KINSHIP** | Small controlled KGQA benchmark with 1–3 hop questions, annotated reasoning paths, and paraphrased questions | [Dataset](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/Kinship/index.html) |
-| **MQuAKE-ST** | Static navigation-ready variant of MQuAKE with 1–4 hop questions, annotated paths, paraphrases, and single- and multi-answer settings | [Dataset](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MQuAKE_ST/index.html) |
+| **KINSHIP** | Small controlled navigation-ready KGQA benchmark with 1–3 hop questions, annotated reference reasoning paths, and controlled paraphrases | [Dataset](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/Kinship/index.html) |
+| **MQuAKE-ST** | Large static navigation-ready variant of MQuAKE with 1–4 hop questions, a fixed Wikidata-derived graph, verified relation-chain templates, paraphrases, and single- and multi-answer settings | [Dataset](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MQuAKE_ST/index.html) |
+
+The released datasets use explicit topic entities and materialized KGs so that
+both terminal-answer quality and executed graph trajectories can be evaluated
+under a reproducible navigation setting.
 
 ### Adapted Navigation Models
 
@@ -41,7 +45,7 @@ checkpoints, and evaluation resources used in THESEUS.
 ### Pretrained Checkpoints
 
 Pretrained checkpoints corresponding to the experiments reported in the paper
-will be linked here.
+will be linked here as they are released.
 
 | Model | KINSHIP | MQuAKE-ST Single | MQuAKE-ST Multi |
 | --- | :---: | :---: | :---: |
@@ -77,18 +81,49 @@ Answer correctness + Path traceability
 
 THESEUS evaluates both:
 
-- **Answer ranking:** Hits@K and MRR
-- **Path traceability:** RED, PED, F1_Rel, and F1_SG
+- **Answer ranking:** MRR and Hits@1
+- **Path traceability:** PED, RED, F1_SG, and F1_Rel
 
 The adapted models replace their original symbolic query interfaces with
 natural-language question conditioning while preserving their underlying
-navigation architectures.
+navigation architectures. The reasoning horizon is separated from the
+underlying question hop length, allowing questions of different depths to be
+evaluated under a common traversal budget.
+
+---
+
+## Dataset Summary
+
+| Dataset | Entities | Relations | Triples | QA setting | Hop lengths |
+| --- | ---: | ---: | ---: | --- | --- |
+| **KINSHIP** | 24 | 12 | 112 | Single-answer | 1–3 |
+| **MQuAKE-ST** | 38,516 | 665 | 724,141 | Single- and multi-answer | 1–4 |
+
+For both released datasets, 1-hop questions are reserved for training in the
+mixed-hop setting. See the individual dataset pages for construction details,
+split statistics, licensing, checksums, and machine-readable metadata.
 
 ---
 
 ## Citation
 
-Citation information will be added with the public preprint.
+If you use THESEUS, the released datasets, or the evaluation protocol, please
+cite:
 
-If you use one of the adapted implementations, please also cite the
+```bibtex
+@article{hernandez2026theseus,
+  author  = {Hernandez, Eduin E. and Garcia, Luis F. and Askar, Nurassyl and Diaz, Sergio A. and Rini, Stefano},
+  title   = {Theseus in the Graph: Towards Traceable Multi-Hop Graph Navigation},
+  journal = {arXiv preprint arXiv:2609.14528},
+  year    = {2026}
+}
+```
+
+When using **Kinship (KGQA)**, please also cite the original UCI **Kinship** work listed on the [Kinship_dataset_page](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/Kinship/index.html)
+
+When using **MQuAKE-ST**, please also cite the original **MQuAKE** and
+**MQuAKE-Remastered** works as listed on the
+[MQuAKE-ST dataset page](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MQuAKE_ST/index.html).
+
+When using the adapted model implementations, please also cite the
 corresponding original **MINERVA**, **MultiHopKG**, or **SQUIRE** paper.
