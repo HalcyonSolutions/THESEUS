@@ -28,7 +28,7 @@ checkpoints, and evaluation resources used in THESEUS.
 | Dataset | Description | Resource |
 | --- | --- | --- |
 | **KINSHIP** | Small controlled navigation-ready KGQA benchmark with 1–3 hop questions, annotated reference reasoning paths, and controlled paraphrases | [Hugging Face](https://huggingface.co/datasets/HalcyonSolutions/Kinship) · [GCS mirror](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/Kinship/index.html) |
-| **MQuAKE-ST** | Large static navigation-ready variant of MQuAKE with 1–4 hop questions, a fixed Wikidata-derived graph, verified relation-chain templates, paraphrases, and single- and multi-answer settings | [Dataset](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MQuAKE_ST/index.html) |
+| **MQuAKE-ST** | Large static navigation-ready variant of MQuAKE with 1–4 hop questions, a fixed Wikidata-derived graph, verified relation-chain templates, paraphrases, and single- and multi-answer settings | [Hugging Face](https://huggingface.co/datasets/HalcyonSolutions/MQuAKE-ST) · [GCS mirror](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MQuAKE_ST/index.html) |
 
 The released datasets use explicit topic entities and materialized KGs so that
 both terminal-answer quality and executed graph trajectories can be evaluated
