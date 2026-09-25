@@ -116,10 +116,10 @@ evaluated under a common traversal budget.
 ## Dataset Summary
 
 | Dataset | Entities | Relations | Triples | QA setting | Hop lengths | Reference paths |
-| --- | ---: | ---: | ---: | --- | ---: | :---: |
+| --- | ---: | ---: | ---: | --- | :---: | :---: |
 | **KINSHIP** | 24 | 12 | 112 | Single-answer | 1–3 | Yes |
 | **MQuAKE-ST** | 38,516 | 665 | 724,141 | Single- and multi-answer | 1–4 | Yes |
-| **MetaQA** | 43,234 | 9 | 134,741 | Multi-answer | 1-3 | No |
+| **MetaQA** | 43,234 | 9 | 134,741 | Multi-answer | 1-3 | **No** |
 
 For **KINSHIP** and **MQuAKE-ST**, 1-hop questions are reserved for training in
 the mixed-hop setting. These releases include explicit reference reasoning paths,
