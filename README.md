@@ -25,6 +25,8 @@ checkpoints, and evaluation resources used in THESEUS.
 
 ### Datasets
 
+#### THESEUS Dataset Releases
+
 | Dataset | Description | Resource |
 | --- | --- | --- |
 | **KINSHIP** | Small controlled navigation-ready KGQA benchmark with 1–3 hop questions, annotated reference reasoning paths, and controlled paraphrases | [Hugging Face](https://huggingface.co/datasets/HalcyonSolutions/Kinship) · [GCS mirror](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/Kinship/index.html) |
@@ -33,6 +35,25 @@ checkpoints, and evaluation resources used in THESEUS.
 The released datasets use explicit topic entities and materialized KGs so that
 both terminal-answer quality and executed graph trajectories can be evaluated
 under a reproducible navigation setting.
+
+#### Additional Navigation-Ready Benchmarks
+
+We also provide navigation-ready versions of established multi-hop KGQA
+benchmarks used in our experiments and subsequent evaluations. These datasets
+were **not created by the THESEUS authors**. The original dataset sources are
+linked below alongside the corresponding THESEUS-formatted versions.
+
+| Dataset | Original source | THESEUS version |
+| --- | --- | --- |
+| **MetaQA** | [yuyuz/MetaQA](https://github.com/yuyuz/MetaQA) | [GCS](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MetaQA/index.html) |
+| **PathQuestion** | [zmtkeke/IRN – PathQuestion](https://github.com/zmtkeke/IRN/tree/master/PathQuestion) | Coming soon |
+| **WC2014** | [zmtkeke/IRN – WC2014](https://github.com/zmtkeke/IRN/tree/master/WC2014) | Coming soon |
+
+> **Dataset attribution.** The entries above retain their original authorship
+> and licensing. The THESEUS versions refer only to preprocessing, encoding,
+> and/or repackaging performed to make the datasets compatible with the common
+> graph-navigation format used by this project. Please cite the original
+> dataset publications when using these benchmarks.
 
 ### Adapted Navigation Models
 
