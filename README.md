@@ -115,13 +115,21 @@ evaluated under a common traversal budget.
 
 ## Dataset Summary
 
-| Dataset | Entities | Relations | Triples | QA setting | Hop lengths |
-| --- | ---: | ---: | ---: | --- | --- |
-| **KINSHIP** | 24 | 12 | 112 | Single-answer | 1–3 |
-| **MQuAKE-ST** | 38,516 | 665 | 724,141 | Single- and multi-answer | 1–4 |
+| Dataset | Entities | Relations | Triples | QA setting | Hop lengths | Reference paths |
+| --- | ---: | ---: | ---: | --- | ---: | :---: |
+| **KINSHIP** | 24 | 12 | 112 | Single-answer | 1–3 | Yes |
+| **MQuAKE-ST** | 38,516 | 665 | 724,141 | Single- and multi-answer | 1–4 | Yes |
+| **MetaQA** | 43,234 | 9 | 134,741 | Multi-answer | 1-3 | No |
 
-For both released datasets, 1-hop questions are reserved for training in the
-mixed-hop setting. See the individual dataset pages for construction details,
+For **KINSHIP** and **MQuAKE-ST**, 1-hop questions are reserved for training in
+the mixed-hop setting. These releases include explicit reference reasoning paths,
+enabling evaluation of both terminal-answer correctness and executed trajectory
+fidelity.
+
+**MetaQA** provides question-answer supervision but does not include reference
+reasoning paths.
+
+See the individual dataset pages for construction and preprocessing details,
 split statistics, licensing, checksums, and machine-readable metadata.
 
 ---
