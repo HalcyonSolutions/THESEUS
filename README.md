@@ -2,20 +2,22 @@
 
 ## Theseus in the Graph: Towards Traceable Multi-Hop Graph Navigation
 
-**THESEUS** studies multi-hop Knowledge Graph Question Answering (KGQA) as
-**question-conditioned graph navigation**.
+**THESEUS** is a framework for studying multi-hop Knowledge Graph Question Answering (KGQA) as **question-conditioned graph navigation**.
 
-Given a natural-language question, a topic entity, and a knowledge graph, an
-agent must navigate the graph to reach a valid answer while producing the
-explicit sequence of relations and entities used to get there.
+Rather than evaluating only whether a model reaches the correct answer, THESEUS makes the reasoning process explicit: given a **natural-language question**, a **starting entity**, and a **knowledge graph**, an agent must navigate the graph hop by hop to reach a valid answer.
 
-The goal is to evaluate not only **whether a model reaches the correct answer**,
-but also **whether its trajectory follows the intended reasoning structure**.
+This formulation enables evaluation of both:
+
+- **Answer correctness** — did the agent reach the correct answer?
+- **Path fidelity** — did it follow the reasoning trajectory supported by the question?
+
+![Theseus in the Graph: Multi-Hop KG Navigation](agent_navigation.gif)
+
+The resulting trajectories expose the sequence of **entities and relations** used during reasoning, making it possible to distinguish successful navigation from cases where a model arrives at the right answer through an incorrect or unintended path.
 
 > **Paper:** [*Theseus in the Graph: Towards Traceable Multi-Hop Graph Navigation*](https://arxiv.org/abs/2609.14528)  
 > Eduin E. Hernandez, Luis F. Garcia, Nurassyl Askar, Sergio A. Diaz, Stefano Rini  
 > **arXiv:** [2609.14528](https://arxiv.org/abs/2609.14528)
-
 ---
 
 ## Resources
