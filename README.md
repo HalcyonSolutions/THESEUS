@@ -66,13 +66,22 @@ linked below alongside the corresponding THESEUS-formatted versions.
 ### Pretrained Checkpoints
 
 Pretrained checkpoints corresponding to the experiments reported in the paper
-will be linked here as they are released.
+are provided below.
 
-| Model | KINSHIP | MQuAKE-ST Single | MQuAKE-ST Multi |
-| --- | :---: | :---: | :---: |
-| MINERVA | Coming soon | Coming soon | Coming soon |
-| MultiHopKG | Coming soon | Coming soon | Coming soon |
-| SQUIRE | Coming soon | Coming soon | Coming soon |
+Each released checkpoint page provides the model archives, saved run
+configurations, evaluation artifacts, SHA-256 checksums, and licensing
+information.
+
+| Model | KINSHIP | MQuAKE-ST Single | MQuAKE-ST Multi | MetaQA |
+| --- | :---: | :---: | :---: | :---: |
+| **MINERVA** | [Available](https://storage.googleapis.com/halcyon_data/multihop_ds/conferences/all/minerva/kinshiphinton/index.html) | [Available](https://storage.googleapis.com/halcyon_data/multihop_ds/conferences/all/minerva/mquake_st/single_answers/index.html) | [Available](https://storage.googleapis.com/halcyon_data/multihop_ds/conferences/all/minerva/mquake_st/multi_answers/index.html) | [Available](https://storage.googleapis.com/halcyon_data/multihop_ds/conferences/all/minerva/metaqa/index.html) |
+| **MultiHopKG** | Coming soon | Coming soon | Coming soon | Coming soon |
+| **SQUIRE** | Coming soon | Coming soon | Coming soon | Coming soon |
+
+The checkpoint archives preserve the trained model together with the effective
+configuration and evaluation artifacts from the corresponding experimental run.
+See the individual checkpoint pages for archive contents, loading instructions,
+checksums, and license information.
 
 ---
 
