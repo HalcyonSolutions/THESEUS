@@ -45,17 +45,19 @@ benchmarks used in our experiments and subsequent evaluations. These datasets
 were **not created by the THESEUS authors**. The original dataset sources are
 linked below alongside the corresponding THESEUS-formatted versions.
 
-| Dataset | Original source | THESEUS version |
+| Dataset | Original source | THESEUS resource |
 | --- | --- | --- |
 | **MetaQA** | [yuyuz/MetaQA](https://github.com/yuyuz/MetaQA) | [GCS](https://storage.googleapis.com/halcyon_data/multihop_ds/datasets/MetaQA/index.html) |
-| **PathQuestion** | [zmtkeke/IRN – PathQuestion](https://github.com/zmtkeke/IRN/tree/master/PathQuestion) | Coming soon |
+| **PathQuestion (PQ/PQL)** | [zmtkeke/IRN – PathQuestion](https://github.com/zmtkeke/IRN/tree/master/PathQuestion) | [Reconstruction Pipeline](https://github.com/HernandezEduin/PathQuestion-Family) |
 | **WC2014** | [zmtkeke/IRN – WC2014](https://github.com/zmtkeke/IRN/tree/master/WC2014) | Coming soon |
 
-> **Dataset attribution.** The entries above retain their original authorship
-> and licensing. The THESEUS versions refer only to preprocessing, encoding,
-> and/or repackaging performed to make the datasets compatible with the common
-> graph-navigation format used by this project. Please cite the original
-> dataset publications when using these benchmarks.
+> **Dataset attribution.** These benchmarks retain their original authorship. The
+> linked THESEUS resources provide navigation-ready datasets or reproducible
+> reconstruction pipelines, depending on the availability and redistribution
+> permissions of the original datasets. The PathQuestion reconstruction
+> references the original IRN release through a pinned Git submodule rather
+> than redistributing its data. Please cite the original publications and respect
+> their applicable licensing terms.
 
 ### Adapted Navigation Models
 
