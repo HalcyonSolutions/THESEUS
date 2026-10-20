@@ -59,6 +59,18 @@ linked below alongside the corresponding THESEUS-formatted versions.
 > than redistributing its data. Please cite the original publications and respect
 > their applicable licensing terms.
 
+
+### Quickstarts and Interactive Navigation
+
+The following Hugging Face Spaces provide dataset quickstarts and an interactive KGQA navigation challenge.
+
+| Resource | Description |
+| --- | --- |
+| [**Kinship Quickstart**](https://huggingface.co/spaces/muttsurini/Kinship-Quickstart) | Browse QA examples, reference paths, and dataset loading instructions |
+| [**MQuAKE-ST Quickstart**](https://huggingface.co/spaces/muttsurini/MQuAKE-ST-Quickstart) | Explore single- and multi-answer QA records, relation chains, and dataset loading instructions |
+| [**KGQA Navigation Challenge**](https://huggingface.co/spaces/HalcyonSolutions/KGQA-Navigation-Challenge) | Navigate Kinship or MQuAKE-ST graphs manually to answer canonical or paraphrased questions |
+
+
 ### Adapted Navigation Models
 
 | Model | Navigation paradigm | THESEUS implementation |
@@ -86,6 +98,10 @@ The checkpoint archives preserve the trained model together with the effective
 configuration and evaluation artifacts from the corresponding experimental run.
 See the individual checkpoint pages for archive contents, loading instructions,
 checksums, and license information.
+
+For **frozen small language model (SLM) graph navigation**, including iterative
+KGQA navigation and path-fidelity evaluation, see the
+[SLM KGQA navigation project](https://github.com/HalcyonSolutions/LLM_KGQA).
 
 ---
 
